@@ -19,10 +19,10 @@ Build a WebUI of ChatGPT with multiple authentication methods using Gradio and r
 ## How to login
   - Before webui launch
   
-  Replace the corresponding variable in app.py
+  Replace the corresponding variable in ```app.py``` (see more details in ```app.py```).
   - After webui launch
   
-  Login through UI Login button
+  Login through UI Login button when WebUI is running by choosing a method based on your token type.
 
 ## How to launch webui
 
