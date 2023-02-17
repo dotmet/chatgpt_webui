@@ -66,15 +66,13 @@ def chatgpt_clone(inputs, history):
 with gr.Blocks() as demo:
     gr.Markdown("""<h1><center>ChatGPT BOT build by revChatGPT & Gradio</center></h1>
     """)
-    gr.Markdown(
-        "#### Author: [dotmet](https://github.com/dotmet)  Github link:[ChatGPTWEB](https://github.com/dotmet/chatgpt_webui)")
 
     if not ((email and password) or access_token or session_token):
         gr.Markdown("""<h2>Login to OpenAI</h2>""")
         with gr.Row():
             with gr.Group():
                 method = gr.Dropdown(label="Login Method", choices=login_method)
-                info = gr.Textbox(placeholder="email password/access_token/session_token", label="Login Information")
+                info = gr.Textbox(placeholder="email password/access_token/session_token", label="Login Information (choose login method first)")
                 with gr.Row():
                     login = gr.Button("Login")
                     login.click(configure_chatbot, inputs=[method, info])
