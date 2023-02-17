@@ -43,5 +43,5 @@ Launch webui:
   python app.py
 ```
 
-## UI
+## Chat in WebUI
 ![ui](https://github.com/dotmet/chatgpt_webui/blob/main/UI.JPG)
