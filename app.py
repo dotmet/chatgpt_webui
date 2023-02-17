@@ -13,6 +13,14 @@ access_token = ""
 # If you have a session token, put your session token here
 session_token = ""
 
+
+def is_google_colab():
+    try:
+        import google.colab
+        return True
+    except:
+        return False
+
 def configure_chatbot(method, info):
     
     if method=="Email/Password":
@@ -89,4 +97,4 @@ with gr.Blocks() as demo:
     submit = gr.Button("SEND")
     submit.click(chatgpt_clone, inputs=[message, state], outputs=[chatbot1, state])
 
-    demo.launch(debug = True, share=False)
+    demo.launch(debug = True, share=is_google_colab())
