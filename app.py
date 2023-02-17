@@ -20,9 +20,9 @@ def configure_chatbot(method, info):
     
     if method=="Email/Password":
         email, password = info.split()
-    elif method=="access_token":
+    elif method=="Access token":
         access_token = info
-    elif method=="session_token":
+    elif method=="Session token":
         session_token = info
 
     config = {}
