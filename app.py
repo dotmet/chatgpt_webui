@@ -1,4 +1,3 @@
-import os
 import gradio as gr
 from revChatGPT.V1 import Chatbot
 
