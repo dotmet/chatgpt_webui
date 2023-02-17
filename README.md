@@ -1,5 +1,5 @@
 # chatgpt_webui
-Build an WebUI of ChatGPT with multiple authentication method using Gradio and revChatGPT
+Build a WebUI of ChatGPT with multiple authentication methods using Gradio and revChatGPT
 
 (Based on [revChatGPT](https://github.com/acheong08/ChatGPT) and [Gradio](https://gradio.app/))
 
