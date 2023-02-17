@@ -1,36 +1,44 @@
-# chatgpt_webui
+# ChatGPT_WebUI
 Build a WebUI of ChatGPT with multiple authentication methods using Gradio and revChatGPT
 
 (Based on [revChatGPT](https://github.com/acheong08/ChatGPT) and [Gradio](https://gradio.app/))
 
 #### If you have a Valid OpenAI account, u can use ChatGPT on [HuggingFace](https://huggingface.co/) through this project without VPN tools.
-#### HuggingFace [Demo](https://huggingface.co/spaces/dotmet/chatgpt_webui)
-#### GoogleColab [Demo](https://colab.research.google.com/drive/1NhSKhSPFNsEzCIjcNgnbDQgewtp6Leub#scrollTo=q9qPXpL_ydSW)
+#### This project will not SAVE/DISPLAY/SHARE the ACCOUNT INFO of any user!!
 
 
-### This project will not SAVE/DISPLAY/SHARE the ACCOUNT INFO of any user!!
+## Demos
+  - HuggingFace [Demo](https://huggingface.co/spaces/dotmet/chatgpt_webui)
+  - GoogleColab [Demo](https://colab.research.google.com/drive/1NhSKhSPFNsEzCIjcNgnbDQgewtp6Leub#scrollTo=q9qPXpL_ydSW)
 
-## How to use it
+## Login methods
+  1. Email/Password
+  2. Access token
+  3. Session token
 
-This project requires:
-  revChatGPT
-  Gradio
+## How to login
+  - Before webui launch
+  
+  Replace the corresponding variable in app.py
+  - After webui launch
+  
+  Login through UI Login button
 
-clone this repository
+## How to launch webui
+
+Clone this repository:
 
 ```bash
   git clone https://github.com/dotmet/chatgpt_webui.git
 ```
 
-install depencies
+Install depencies:
 
 ```bash
   cd chatgpt_webui
   pip install -r requirements.txt
 ```
-  
-## Run Web UI
-
+Launch webui:
 ```
   python app.py
 ```
