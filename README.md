@@ -10,7 +10,7 @@ Build a WebUI of ChatGPT with multiple authentication methods using Gradio and r
 （如果无法登录OpenAI，使用HuggingFace部署chatgpt_webui，然后使用账号密码登录即可正常使用ChatGPT，无需使用任何VPN）
 
   - HuggingFace [Demo](https://huggingface.co/spaces/dotmet/chatgpt_webui) 
-  - GoogleColab [Demo](https://colab.research.google.com/drive/1NhSKhSPFNsEzCIjcNgnbDQgewtp6Leub#scrollTo=q9qPXpL_ydSW)
+  - GoogleColab [Demo](https://colab.research.google.com/drive/1NhSKhSPFNsEzCIjcNgnbDQgewtp6Leub?usp=sharing)
 
 ## Login methods
   1. Email/Password
