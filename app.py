@@ -20,7 +20,9 @@ def is_google_colab():
         return True
     except:
         return False
-
+    
+chatbot = None
+    
 def configure_chatbot(method, info):
     
     if method=="Email/Password":
@@ -39,7 +41,6 @@ def configure_chatbot(method, info):
     elif session_token:
         config.update({"session_token": session_token})
 
-    global chatbot
     chatbot = Chatbot(config=config)
 
 login_method = ['Email/Password',
@@ -49,8 +50,11 @@ login_method = ['Email/Password',
 
 def ask_bot(prompt):
     message = ""
-    for data in chatbot.ask(prompt):
-        message = data["message"]
+    if chatbot:
+        for data in chatbot.ask(prompt):
+            message = data["message"]
+    else:
+        message = "The chatbot is not set up properly! Try to login again."
     return parse_text(message)
 
 def parse_text(text):
