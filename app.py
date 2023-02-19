@@ -51,14 +51,24 @@ def ask_bot(prompt):
     message = ""
     for data in chatbot.ask(prompt):
         message = data["message"]
-    return message
+    return parse_text(message)
+
+def parse_text(text):
+    lines = text.split("\n")
+    for i,line in enumerate(lines):
+        if "```" in line:
+            items = line.split('`')
+            if len(items)>3:
+                lines[i] = f'<pre><code class="{items[-1]}">'
+            else:
+                lines[i] = f'</code></pre>'
+        else:
+            if i>0:
+                lines[i] = '<br/>'+line.replace(" ", "&nbsp;")
+    return "".join(lines)
 
 def chatgpt_clone(inputs, history):
     history = history or []
-    # s = list(sum(history, ()))
-    # s.append(inputs)
-    # inp = ' '.join(s)
-    # print(inp)
     output = ask_bot(inputs)
     history.append((inputs, output))
     return history, history
