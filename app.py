@@ -71,7 +71,7 @@ def parse_text(text):
                 lines[i] = '<br/>'+line.replace(" ", "&nbsp;")
     return "".join(lines)
 
-def chatgpt_clone(inputs, history):
+def chat_clone(inputs, history):
     history = history or []
     output = ask_bot(inputs)
     history.append((inputs, output))
@@ -104,9 +104,12 @@ with gr.Blocks() as demo:
 
     gr.Markdown("""<h2>Start Chatting ...</h2>""")
     chatbot1 = gr.Chatbot()
-    message = gr.Textbox(placeholder="Chat here")
     state = gr.State()
+    message = gr.Textbox(placeholder="Chat here", label="Human: ")
+    message.submit(chat_clone, inputs=[message, state], outputs=[chatbot1, state])
+    message.submit(lambda :"", None, message)
+    
     submit = gr.Button("SEND")
-    submit.click(chatgpt_clone, inputs=[message, state], outputs=[chatbot1, state])
+    submit.click(chat_clone, inputs=[message, state], outputs=[chatbot1, state])
 
     demo.launch(debug = True, share=is_google_colab())
