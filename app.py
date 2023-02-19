@@ -111,6 +111,5 @@ with gr.Blocks() as demo:
     
     submit = gr.Button("SEND")
     submit.click(chat_clone, inputs=[message, state], outputs=[chatbot1, state])
-    message.submit(lambda :"", None, message)
 
     demo.launch(debug = True, share=is_google_colab())
