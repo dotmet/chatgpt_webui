@@ -104,12 +104,13 @@ with gr.Blocks() as demo:
 
     gr.Markdown("""<h2>Start Chatting ...</h2>""")
     chatbot1 = gr.Chatbot()
-    state = gr.State()
+    state = gr.State([])
     message = gr.Textbox(placeholder="Chat here", label="Human: ")
     message.submit(chat_clone, inputs=[message, state], outputs=[chatbot1, state])
     message.submit(lambda :"", None, message)
     
     submit = gr.Button("SEND")
     submit.click(chat_clone, inputs=[message, state], outputs=[chatbot1, state])
+    message.submit(lambda :"", None, message)
 
     demo.launch(debug = True, share=is_google_colab())
