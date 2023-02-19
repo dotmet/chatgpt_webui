@@ -40,7 +40,8 @@ def configure_chatbot(method, info):
         config.update({"access_token": access_token})
     elif session_token:
         config.update({"session_token": session_token})
-
+    
+    global chatbot
     chatbot = Chatbot(config=config)
 
 login_method = ['Email/Password',
