@@ -58,7 +58,7 @@ def parse_text(text):
     for i,line in enumerate(lines):
         if "```" in line:
             items = line.split('`')
-            if len(items)>3:
+            if items[-1]:
                 lines[i] = f'<pre><code class="{items[-1]}">'
             else:
                 lines[i] = f'</code></pre>'
