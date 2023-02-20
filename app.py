@@ -1,6 +1,8 @@
 import gradio as gr
 from revChatGPT.V1 import Chatbot
 
+import argparse
+
 #You can setup login information here, or login in from UI
 
 # If you want to use Email/Password to login, put your account information here
@@ -13,6 +15,15 @@ access_token = ""
 # If you have a session token, put your session token here
 session_token = ""
 
+
+def get_args():
+    parser = argparse.ArgumentParser(description='Command line args.')
+    parser.add_argument(
+        '--no_markdown',
+        type=str,
+        default='yes',
+        help='Disable the markdown of the web UI.')
+    return parser.parse_args()
 
 def is_google_colab():
     try:
@@ -79,11 +90,14 @@ def chat_clone(inputs, history):
     return history, history
 
 with gr.Blocks() as demo:
-    gr.Markdown("""<h1><center>ChatGPT BOT build by revChatGPT & Gradio</center></h1>
-    """)
+    args = get_args()
+    
+    if not args.no_markdown:
+        gr.Markdown("""<h1><center>ChatGPT BOT build by revChatGPT & Gradio</center></h1>""")
 
     if not ((email and password) or access_token or session_token):
-        gr.Markdown("""<h2>Login to OpenAI</h2>""")
+        if not args.no_markdown:
+            gr.Markdown("""<h2>Login to OpenAI</h2>""")
         with gr.Row():
             with gr.Group():
                 method = gr.Dropdown(label="Login Method", choices=login_method)
@@ -102,8 +116,10 @@ with gr.Blocks() as demo:
             method = "Session token"
             info = session_token
         configure_chatbot(method, info)
-
-    gr.Markdown("""<h2>Start Chatting ...</h2>""")
+    
+    if not args.no_markdown:
+        gr.Markdown("""<h2>Start Chatting ...</h2>""")
+        
     chatbot1 = gr.Chatbot()
     state = gr.State([])
     message = gr.Textbox(placeholder="Chat here", label="Human: ")
