@@ -20,9 +20,8 @@ def get_args():
     parser = argparse.ArgumentParser(description='Command line args.')
     parser.add_argument(
         '--no_markdown',
-        type=str,
-        default='yes',
-        help='Disable the markdown of the web UI.')
+        action='store_true',
+        help='Disable the markdown of the web UI.',)
     return parser.parse_args()
 
 def is_google_colab():
@@ -90,6 +89,7 @@ def chat_clone(inputs, history):
     return history, history
 
 with gr.Blocks() as demo:
+    
     args = get_args()
     
     if not args.no_markdown:
