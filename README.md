@@ -44,6 +44,14 @@ Launch webui:
   python app.py
 ```
 
+## Launch options
+ - ```--no_markdown``` Disable all mark down to make the UI clean. Example usage: 
+ ```bash
+ python app.py --no_markdown
+ ```
+ 
+ - Other options coming soon.
+
 ## Chat in WebUI (example)
 
 ![ui](https://github.com/dotmet/chatgpt_webui/blob/main/UI.JPG)
