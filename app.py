@@ -88,7 +88,12 @@ def chat_clone(inputs, history):
     history.append((inputs, output))
     return history, history
 
-with gr.Blocks(css="style.css") as demo:
+if ((email and password) or access_token or session_token):
+    css = "style.css"
+else:
+    css = None
+
+with gr.Blocks(css=css) as demo:
     
     args = get_args()
     
