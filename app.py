@@ -52,7 +52,10 @@ def configure_chatbot(method, info):
         config.update({"session_token": session_token})
     
     global chatbot
-    chatbot = Chatbot(config=config)
+    try:
+        chatbot = Chatbot(config=config)
+    except:
+        chatbot = None
 
 login_method = ['Email/Password',
                 'Access token',
