@@ -1,0 +1,10 @@
+.gradio-container {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+[id$=chatbot] > div{
+    border: 0;
+    height: 70vh;
+    overflow-y: auto;
+}
