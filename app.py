@@ -88,7 +88,7 @@ def chat_clone(inputs, history):
     history.append((inputs, output))
     return history, history
 
-with gr.Blocks() as demo:
+with gr.Blocks(css="style.css") as demo:
     
     args = get_args()
     
@@ -120,7 +120,7 @@ with gr.Blocks() as demo:
     if not args.no_markdown:
         gr.Markdown("""<h2>Start Chatting ...</h2>""")
         
-    chatbot1 = gr.Chatbot()
+    chatbot1 = gr.Chatbot(elem_id="chatbot", show_label=False)
     state = gr.State([])
     message = gr.Textbox(placeholder="Chat here", label="Human: ")
     message.submit(chat_clone, inputs=[message, state], outputs=[chatbot1, state])
