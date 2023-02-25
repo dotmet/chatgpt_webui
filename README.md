@@ -6,7 +6,7 @@ Build a WebUI of ChatGPT with multiple authentication methods using Gradio and r
 #### If you have a Valid OpenAI account, u can use ChatGPT on [HuggingFace](https://huggingface.co/spaces/dotmet/chatgpt_webui) through this project without VPN tools.
 
 ## Demos
-#### To bypass the Area and Network restriction, you can duplicate the huggingface space demo and login using your own account. Then you can use ChatGPT in any place.
+#### To bypass the Area and Network restriction, you can duplicate the huggingface space demo and login using your own account. Then you can use ChatGPT anywhere.
 （如果无法登录OpenAI，使用HuggingFace部署chatgpt_webui，然后使用账号密码登录即可正常使用ChatGPT，无需使用任何VPN）
 
   - HuggingFace [Demo](https://huggingface.co/spaces/dotmet/chatgpt_webui) 
