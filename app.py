@@ -82,6 +82,8 @@ def parse_text(text):
                 lines[i] = f'</code></pre>'
         else:
             if i>0:
+                line = line.replace("<", "&lt;")
+                line = line.replace(">", "&gt;")
                 lines[i] = '<br/>'+line.replace(" ", "&nbsp;")
     return "".join(lines)
 
