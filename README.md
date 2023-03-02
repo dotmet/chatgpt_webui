@@ -51,7 +51,7 @@ Launch webui:
  ```
  
  If you put the token in ```app.py``` and then launch it with the option ```--no_markdown```, you will get a very clean UI:
- ![clean_mode](https://github.com/dotmet/chatgpt_webui/blob/main/clean.JPG)
+ ![clean_mode](https://github.com/dotmet/chatgpt_webui/blob/main/imgs/clean.JPG)
  
  - Other options coming soon.
 
@@ -59,8 +59,8 @@ Launch webui:
 
   - Full of markdown
 
-![ui](https://github.com/dotmet/chatgpt_webui/blob/main/example.JPG)
+![ui](https://github.com/dotmet/chatgpt_webui/blob/main/imgs/example.JPG)
 
   - Write cpp code
  
-![cpp_code](https://github.com/dotmet/chatgpt_webui/blob/main/code.JPG)
+![cpp_code](https://github.com/dotmet/chatgpt_webui/blob/main/imgs/code.JPG)
