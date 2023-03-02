@@ -61,6 +61,6 @@ Launch webui:
 
 ![ui](https://github.com/dotmet/chatgpt_webui/blob/main/imgs/example.JPG)
 
-  - Write cpp code
+  - Generate cpp code
  
 ![cpp_code](https://github.com/dotmet/chatgpt_webui/blob/main/imgs/code.JPG)
