@@ -1,7 +1,11 @@
 # ChatGPT_WebUI
 Build a WebUI of ChatGPT with multiple authentication methods using Gradio and revChatGPT
-
 (Based on [revChatGPT](https://github.com/acheong08/ChatGPT) and [Gradio](https://gradio.app/))
+
+## !!! Update: Account login disabled for the present, because some accounts are deactivated by OpenAI when using revChatGPT.
+## !!! 更新：已停用登录功能，目前使用三方访问途径会有被OpenAI封号的风险。
+
+
 #### This project will not SAVE/DISPLAY/SHARE the ACCOUNT INFO of any user!!
 #### If you have a Valid OpenAI account, u can use ChatGPT on [HuggingFace](https://huggingface.co/spaces/dotmet/chatgpt_webui) through this project without VPN tools.
 
