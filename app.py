@@ -53,7 +53,8 @@ def configure_chatbot(method, info):
     
     global chatbot
     try:
-        chatbot = Chatbot(config=config)
+        #chatbot = Chatbot(config=config)
+        chatbot = None
     except:
         chatbot = None
 
